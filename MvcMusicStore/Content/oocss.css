@@ -1,0 +1,243 @@
+﻿/*
+OOCSS template
+*/
+
+/*
+OOCSS grid
+*/
+.col {
+    float:left;
+    margin-bottom: 20px;
+}
+
+.oneCol {
+    width: 100%;
+}
+
+.twoCols {
+    width:50%;
+}
+
+.threeCols,
+.oneThird {
+    width:33.33%;
+}
+
+.fourCols,
+.oneFourth {
+    width:25%;
+}
+
+.fiveCols,
+.oneFifth {
+    width:20%;
+}
+
+.twoThird {
+    width: 66.67%;
+}
+
+.threeFourth {
+    width:75%;
+}
+
+.twoFifth {
+    width: 40%;
+}
+
+.threeFifth {
+    width:60%;
+}
+
+.fourFifth {
+    width:80%;
+}
+
+/*
+OOCSS module
+*/
+.mod {
+    margin:10px;
+    padding: 10px;
+    -webkit-box-shadow:  1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    box-shadow:  1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align:center;
+}
+.button {
+    background: linear-gradient(to right, #932624 0px, #A41E1B 21%, #C22721 41%, #C02621 60%, #A51F1B 80%, #8D1916 100%) repeat scroll 0 0 transparent;
+    border-radius: 8px 8px 8px 8px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 10px;
+    float:left;
+}
+
+.gold {
+background: linear-gradient(to bottom, #8F7236 0px, #8D7035 30%, #7E632B 84%, #715720 100%) repeat scroll 0 0 transparent;
+}
+
+    .button:hover,
+    .button:active,
+    .button:focus {
+        background: linear-gradient(to bottom, #616161 0px, #565656 39%, #4A4A4A 58%, #2F2F2F 100%) repeat scroll 0 0 transparent;
+        color:#fff;
+        text-decoration:none;
+    }
+
+.btnWrapper {
+    padding: 0 48px;
+}
+
+.carDemo {
+ text-align: center;
+}
+
+    .carDemo p {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 2em;
+    }
+.carBg + .btnWrapper {
+    padding: 0;
+    margin: 0 auto;
+    width: 360px;
+}
+
+.carBg {
+    background: none repeat scroll 0 0 red;
+    border-radius: 50px 50px 0 0;
+    display: block;
+    height: 100px;
+    margin: 10px 0 30px 0;
+    position: relative;
+    width: 150px;
+    left: 0px;
+    
+}
+
+.carMove { 
+    -webkit-transition: left 5s ease;  
+    -moz-transition: left 5s ease;  
+    -o-transition: left 5s ease;  
+    -ms-transition: left 5s ease;  
+    transition: left 5s ease;
+}
+
+.carChange {
+    left: 200px !important;
+}
+
+.carAnimation {
+    animation: myfirst 5s;
+    -webkit-animation: myfirst 5s;
+}
+
+@keyframes myfirst
+{
+0%   {background:red;}
+10%  {background:yellow;}
+20%  {background:blue;}
+30%  {background:green;}
+40% {background:red;}
+50%  {background:yellow;}
+60%  {background:blue;}
+70%  {background:green;}
+80% {background:red;}
+90% {background:green;}
+100% {background:blue;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red;}
+10%  {background:yellow;}
+20%  {background:blue;}
+30%  {background:green;}
+40% {background:red;}
+50%  {background:yellow;}
+60%  {background:blue;}
+70%  {background:green;}
+80% {background:red;}
+90% {background:green;}
+100% {background:blue;}
+}
+
+.wheel {
+    background: none repeat scroll 0 0 black;
+    border-radius: 40px 40px 40px 40px;
+    display: block;
+    float: left;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+.carLeftWheel {
+    top: 70px;
+    left: 10px;
+}
+
+.carRightWheel {
+    top: 70px;
+    left: 90px;
+}
+
+#datepicker {
+    margin: 20px;
+}
+
+.ui-datepicker-header {
+    background: linear-gradient(to bottom, #12A7CB 0%, #0385A6 100%) repeat scroll 0 0 transparent;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+    color: #fff;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    color: #fff;
+    background: linear-gradient(to bottom, #D0AD6D 0%, #B99758 100%) repeat scroll 0 0 transparent;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    background: linear-gradient(to bottom, #12A7CB 0%, #0385A6 100%) repeat scroll 0 0 transparent;
+}
+
+
+/*Helper Class*/
+.clearfix,
+.cols,
+.btnWrapper,
+.carBg {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after,
+.cols:before,
+.cols:after,
+.btnWrapper:before,
+.btnWrapper:after,
+.carBg:before,
+.carBg:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after,
+.cols:after,
+.btnWrapper:after,
+.carBg:after {
+  clear: both;
+}

@@ -1,0 +1,89 @@
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\MvcMusicStore.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\MvcMusicStore.pdb
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\Antlr3.Runtime.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\EntityFramework.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\Newtonsoft.Json.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Net.Http.Formatting.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.WebHost.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Optimization.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Providers.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Razor.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Razor.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\WebGrease.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\EntityFramework.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\Newtonsoft.Json.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Net.Http.Formatting.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.WebHost.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.Razor.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Razor.xml
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.dll
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.pdb
+D:\Projects\MVC .Net\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\MvcMusicStore.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\MvcMusicStore.pdb
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Antlr3.Runtime.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\EntityFramework.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Microsoft.Web.Infrastructure.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Newtonsoft.Json.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Net.Http.Formatting.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.WebHost.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Optimization.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Providers.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Razor.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Deployment.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Razor.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\WebGrease.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\EntityFramework.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Newtonsoft.Json.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Net.Http.Formatting.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.WebHost.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Razor.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Deployment.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Razor.xml
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.dll
+E:\MvcMusicStore\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.pdb
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\MvcMusicStore.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\MvcMusicStore.pdb
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Antlr3.Runtime.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\EntityFramework.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Newtonsoft.Json.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Net.Http.Formatting.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.WebHost.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Optimization.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Providers.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Razor.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Razor.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\WebGrease.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\EntityFramework.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\Newtonsoft.Json.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Net.Http.Formatting.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Http.WebHost.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.Razor.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Razor.xml
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.dll
+D:\Projects\MvcMusicStore\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.pdb

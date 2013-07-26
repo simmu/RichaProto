@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
+}
+@section basecss{
+    <link href="~/Content/recuritment.css" rel="stylesheet" />
+}
+
+<script type="text/javascript">
+    var __initialData = { "id": 1, "name": "Acme Summmer Ambassadors", "job_posting": "Visible", "application_deadline": "11\/12\/13", "recruitment_status": "Not Yet staffed", "reps_hired": { "current_goal": 10, "max_goal": 100 }, "recruitment_type": "Repnation", "campuses": { "current_goal": 10, "max_goal": 50 }, "school": { "list": [{ "id": 1, "name": "University Of Pennsylvania", "recruitment_status": { "current": 0, "max": 12 }, "added": "20 seconds ago" }, { "id": 2, "name": "University of New Hampshire", "recruitment_status": { "current": 0, "max": 12 }, "added": "20 seconds ago" }, { "id": 3, "name": "Stanford Univeristy", "recruitment_status": { "current": 0, "max": 12 }, "added": "20 seconds ago" }, { "id": 4, "name": "William Paterson University", "recruitment_status": { "current": 0, "max": 12 }, "added": "20 seconds ago" }, { "id": 5, "name": "Stanford Univeristy", "recruitment_status": { "current": 0, "max": 12 }, "added": "20 seconds ago" }, { "id": 6, "name": "North Bergen High School", "recruitment_status": { "current": 0, "max": 12 }, "added": "20 seconds ago" }], "pagination": { "total": 100, "current": 1, "max_page": 100 } } };
+</script>
+
+<div ng-app="rn">
+    <div class="campaign-detail" ng-controller="campaignCtrl">
+        <div campaign rn-model="model" rn-api="api">
+            <h2>{{model.name}}</h2>
+            <hr />
+            <ul class="campaign-status clearfix">
+                <li><b>Job Posting:</b> {{model.job_posting}}</li>
+                <li><b>Application Deadline:</b> {{model.application_deadline}}</li>
+                <li><b>Recruitment Status:</b> {{model.recruitment_status}}</li>
+                <li><b>Reps Hired:</b> {{model.reps_hired.current_goal}} (of {{model.reps_hired.max_goal}} goal)</li>
+                <li><b>Recruitment Type:</b> {{model.recruitment_type}} (<a href="#">change</a>)</li>
+                <li><b>Campuses:</b> {{model.campuses.current_goal}} (of {{model.campuses.max_goal}} goal)</li>
+            </ul>
+            <hr />
+            <div class="clearfix">
+                <h3 class="span6">Regional Quotas</h3>
+                <a href="#" class="export">Export</a>
+            </div>
+            <hr />
+     
+            <!-- Modal -->
+            <div id="modal-confirmDelete" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Confirm Delete</h3>
+                </div>
+                <div class="modal-body">
+                <p ng-hide="hasCompleted">Are you sure you want to delete {{school.name}}?</p>
+                <p ng-show="hasCompleted">{{school.name}} successfully deleted </p>
+                </div>
+                <div class="modal-footer"> 
+                    <a ng-click="onConfirmDelete($event)" data-loading-text="submitting" class="btn btn-primary" href="#" ng-hide="hasCompleted">Confirm</a>
+                    <a ng-click="onDoneDelete($event)" class="btn btn-success" href="#" ng-show="hasCompleted" style="display: none;">Done</a>
+                </div>
+            </div>
+            <!--End Modal-->
+
+            <div id="schoolQuotas">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col30 headerSortUp"><a href="#" ng-click="onSortBy($event, 'SchoolName')">School Name</a></th>
+                            <th class="col30 headerSortUp"><a href="#" ng-click="onSortBy($event, 'RecruitmentStatus')">Recruitment Status</a></th>
+                            <th class="col20 headerSortUp"><a href="#" ng-click="onSortBy($event, 'Added')">Added</a></th>
+                            <th class="col20">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="school in model.school.list">
+                            <td>{{school.name}}</td>
+                            <td>({{school.recruitment_status.current}} / {{school.recruitment_status.max}})</td>
+                            <td>{{school.added}}</td>
+                            <td>
+                               <div class="btn-group">
+                                    <a  class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">View</a></li>
+                                        <li><a href="#" ng-click="doDeleteSchool($event,school)">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#">First</a></li>
+                        <li><a href="#">Prev</a></li>
+                        <li>Page {{model.school.pagination.current}} of {{model.school.pagination.total}}</li>
+                        <li><a href="#">Next</a></li>
+                        <li><a href="#">Last</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                   
+                        
+                   
+
+
+
+@section FooterScript{
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/rnutils.js"></script>
+    <script src="~/Scripts/controller.js"></script>
+    <script src="~/Scripts/angular-strap.0.7.3.js"></script>
+}

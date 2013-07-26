@@ -1,0 +1,14 @@
+﻿h2 {
+    color: #808080;
+}
+.navbar-inner {
+    background-color: #1B1B1B;
+    background-image: linear-gradient(to bottom, #222222, #111111);
+}
+.hero-unit {
+    background-color: #1B1B1B;
+}
+#footer {
+    background-color: #1B1B1B;
+    color: #808080;
+}

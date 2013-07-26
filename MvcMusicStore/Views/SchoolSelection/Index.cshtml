@@ -1,0 +1,261 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
+}
+@section basecss{
+    <link href="~/Content/recuritment.css" rel="stylesheet" />
+}
+<script>
+    //var __initialData = {
+    //    "id": "1",
+    //    "name": "Acme Summer Ambassadors",
+    //    "school": [{
+    //        "id": "1",
+    //        "name": "Ohio State University",
+    //        "population": 24725,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    },
+    //    {
+    //        "id": "2",
+    //        "name": "University of Miami",
+    //        "population": 24725,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    },
+    //    {
+    //        "id": "3",
+    //        "name": "University of Miami",
+    //        "population": 24725,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    },
+    //    {
+    //        "id": "4",
+    //        "name": "University of Miami",
+    //        "population": 24725,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    },
+    //    {
+    //        "id": "5",
+    //        "name": "University of Miami",
+    //        "population": 24725,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    }],
+    //    "action": [{
+    //        "type": "add"
+    //    },
+    //    {
+    //        "type": "remove"
+    //    },
+    //    {
+    //        "type": "move"
+    //    }]
+    //};
+
+    //var __embedData = {
+    //    "school": [{
+    //        "id": "10",
+    //        "name": "Ohio State University",
+    //        "population": 24425,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    },
+    //    {
+    //        "id": "11",
+    //        "name": "Michigan State University",
+    //        "population": 14725,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    },
+    //    {
+    //        "id": "12",
+    //        "name": "University of Miami",
+    //        "population": 8725,
+    //        "reps": 358,
+    //        "campusPolicies": "Restrictive",
+    //        "program_participation_rate": "Low",
+    //        "added": "20 seconds ago"
+    //    }]
+    //};
+
+
+    var __initialData = {
+        embed_list: {
+            "popular_school_list": [{
+                "id": "10",
+                "name": "Ohio State University",
+                "population": 24425,
+                "reps": 358,
+                "campusPolicies": "Restrictive",
+                "program_participation_rate": "Low",
+                "added": "20 seconds ago"
+            },
+        {
+            "id": "11",
+            "name": "Michigan State University",
+            "population": 14725,
+            "reps": 358,
+            "campusPolicies": "Restrictive",
+            "program_participation_rate": "Low",
+            "added": "20 seconds ago"
+        },
+        {
+            "id": "12",
+            "name": "University of Miami",
+            "population": 8725,
+            "reps": 358,
+            "campusPolicies": "Restrictive",
+            "program_participation_rate": "Low",
+            "added": "20 seconds ago"
+        }]
+        },
+        demographic_config: {
+            "id": "1",
+            "name": "Acme Summer Ambassadors",
+            "school": [{
+                "id": "1",
+                "name": "Ohio State University",
+                "population": 24725,
+                "reps": 358,
+                "campusPolicies": "Restrictive",
+                "program_participation_rate": "Low",
+                "added": "20 seconds ago"
+            },
+            {
+                "id": "2",
+                "name": "University of Miami",
+                "population": 24725,
+                "reps": 358,
+                "campusPolicies": "Restrictive",
+                "program_participation_rate": "Low",
+                "added": "20 seconds ago"
+            },
+            {
+                "id": "3",
+                "name": "University of Miami",
+                "population": 24725,
+                "reps": 358,
+                "campusPolicies": "Restrictive",
+                "program_participation_rate": "Low",
+                "added": "20 seconds ago"
+            },
+            {
+                "id": "4",
+                "name": "University of Miami",
+                "population": 24725,
+                "reps": 358,
+                "campusPolicies": "Restrictive",
+                "program_participation_rate": "Low",
+                "added": "20 seconds ago"
+            },
+            {
+                "id": "5",
+                "name": "University of Miami",
+                "population": 24725,
+                "reps": 358,
+                "campusPolicies": "Restrictive",
+                "program_participation_rate": "Low",
+                "added": "20 seconds ago"
+            }]
+        }
+    }
+</script>
+<div ng-app="rn">
+    <div class="demographic-preference" ng-controller="schoolSelectionCtrl">
+        <div selection rn-model="model" rn-api="api" rn-embed="embed">
+                <h2>{{model.name}}</h2>
+                <hr />
+                <h3>Select Demographic Preferences</h3>
+                <hr />
+                <div class="controls controls-row">
+                    <div class="span6">
+                        <label class="control-label">School Search</label>
+                        @*<label class="control-label">@I18N("SchoolSearch","School Search")</label>*@
+                        <input type="text" class="input-xlarge"/>
+                        <button class="btn add-to-list" ng-click="onAddSchool($event,school)">Add to List</button>
+                    </div>
+                    <div class="span6">
+                        <label class="control-label">Most Popular Schools</label>
+                    @*<label class="control-label">@I18N("MostPopularSchools","Most Popular Schools")</label>*@
+                       <select multiple="multiple" class="span12">
+                           <option ng-repeat="school in embed.school">{{school.name}}</option>
+                       </select>
+                        <p class="instruction">Use Command + click to select multiple schools</p>
+                        
+                        <button class="btn add-to-list" ng-click="onAddSchool($event,school)">Add to List</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="clearfix action-ribbon">
+                    <select class="span3 select-btn-same-line">
+                        <option>- Bulk Actions -</option>
+                      <option ng-repeat="action in model.action">{{action.type}}</option>
+                    </select>
+                    <button class="btn">Apply</button>
+                    <a href="#" class="export">Export</a>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th  class="headerSortUp col20">
+                                <input type="checkbox"/>
+                                <a href="#">School Name</a>
+                            </th>
+                            <th class="headerSortUp"><a href="#">Population</a></th>
+                            <th class="headerSortUp"><a href="#">Reps</a></th>
+                            <th class="headerSortUp"><a href="#">Campus Policies</a></th>
+                            <th class="headerSortUp"><a href="#">Program Participation</a></th>
+                            <th class="headerSortUp"><a href="#">Added</a></th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="school in model.school">
+                            <td>
+                               <input type="checkbox" />
+                                <a href="#">{{school.name}}</a>
+                            </td>
+                            <td>{{school.population}}</td>
+                            <td>{{school.reps}}</td>
+                            <td>{{school.campusPolicies}}</td>
+                            <td>{{school.program_participation_rate}}</td>
+                            <td>{{school.added}}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a  class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">View</a></li>
+                                        <li><a href="#" ng-click="onDeleteSchool($event,school.id)">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+
+@section FooterScript{
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/rnutils.js"></script>
+    <script src="~/Scripts/controller.js"></script>
+    <script src="~/Scripts/angular-strap.0.7.3.js"></script>
+}

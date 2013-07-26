@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
+}
+@section basecss{
+    <link href="~/Content/recuritment.css" rel="stylesheet" />
+}
+
+    <div class="recruitment-start">
+        <h2>Acme Summer Ambassadors</h2>
+        <hr />
+        <p>Recruitment for this campaign has not yet begun. Get started by selecting a recruitment method:</p>
+        
+        <label for="" class="radio"><input type="radio" /><b>Recruit using RepNation reps</b></label>
+        <p class="option-desc">This option will allow you to select Reps from our existing database. All new recruits who register for this opportunity will be added into our database.</p>
+    
+        <hr />
+        <h3>Other Recruitment Options</h3>
+        <hr />
+
+        <div class="dotted-border recruitment-options">
+            <div class="control-group">
+            <label for="" class="radio"><input type="radio" /><b>Recruit using non-RepNation reps</b></label>
+            <p class="option-desc" class="controls">This option will block this opportunity from existing Reps in our database. Reps are sourced independently, and added into the portal
+manually. They will have access to the portal only, and will not be added to the Rep database.</p>
+            </div>
+            <div>
+                <label for="" class="radio"><input type="radio" /><b>Auto-hire using RepNation reps</b></label>
+            <p class="option-desc" class="controls">The auto-hire setting will grant instant portal access to anyone who has registered for RepNation and applied to work for the campaign
+via an email link, job posting, or from MyRepnation.</p>
+            </div>
+        </div>
+        <div class="control-group">
+            <button class="btn" type="button">Continue</button>
+        </div>
+    </div>

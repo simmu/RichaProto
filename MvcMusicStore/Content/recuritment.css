@@ -1,0 +1,182 @@
+﻿.campaign-detail ul,
+.campaign-status
+{
+    margin-left: 0;
+}
+
+.campaign-detail h2 + hr {
+    margin: 0 0 10px 0;
+}
+
+.campaign-detail h3 {
+    margin: 0;
+}
+
+/*Generic export link*/
+.export {
+    padding-top: 10px;
+    text-align: right;
+    float: right;
+}
+
+.campaign-status li
+{
+    list-style-type: none;
+    margin: 10px 0;
+    width: 506px;
+    float: left;
+}
+
+.align-r {
+    text-align: right;
+}
+
+.col10 
+{
+    width:10%;
+}
+
+.col20 
+{
+    width:20%;
+}
+
+.col40 
+{
+    width:40%;
+}
+.col30 
+{
+   width:30%; 
+}
+
+.campaign-detail .table th:nth-child(2),
+.campaign-detail .table td:nth-child(2) 
+{
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+}
+
+.caret 
+{
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #0088CC;
+    content: "";
+    display: inline-block;
+    height: 0;
+    margin: 0 0 0 10px;
+    position: relative;
+    top:0;
+    vertical-align: top;
+    width: 0;
+    float: right;
+}
+
+.schoolSelection select, 
+.schoolSelection input[type="text"] {
+    margin: 0 10px 0 0;
+}
+
+.add-to-list {
+    display:block;
+    margin-top: 20px;
+}
+
+.action-ribbon {
+    margin-bottom: 20px;
+}
+
+option {
+    padding: 3px;
+}
+
+input[type="checkbox"] {
+    margin: 0 3px 0 0;
+}
+
+/*Styling for demographic selection preference*/
+select {
+    width: 100px;
+}
+
+/*styling for Recruitment Start page*/
+.range-placeholder {
+    padding: 0 10px;
+}
+
+.option-desc {
+    margin: 0 0 0 20px;
+}
+
+.recruitment-options {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+
+/*global styles*/
+.dotted-border {
+    border: 1px dashed #808080;
+    padding: 10px;
+}
+
+.instruction {
+    font-style:italic;
+    color: #808080;
+    font-size: 12px;
+}
+
+.input-btn-same-line,
+.select-btn-same-line,
+.btn-btn-same-line {
+    margin-right: 10px;
+}
+
+/*Styling for Sortable*/
+.table .headerSortDown {
+    background-color: rgba(141, 192, 219, 0.25);
+}
+
+.table .headerSortDown::after {
+    border-color: #0088CC transparent;
+    border-style: solid;
+    border-width: 0 4px 4px;
+    content: "";
+    position: absolute;
+    margin: 8px 0 0 20px;
+}
+
+.table .headerSortUp::after {
+    border-color: #0088CC transparent;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    content: "";
+    position: relative;
+    margin: 8px 0 0 20px;
+    top: 9px;
+}
+
+/*Styling for hiring page*/
+.hiring-chart .count {
+    display:block;
+}
+
+/*Overridding bootstrap css*/
+
+button.btn {
+    margin-bottom: 10px;
+}
+
+.modal-footer button.btn {
+    margin-bottom: 0;
+}
+
+.dropdown-menu {
+    left: -124px;
+}
+
+.tab-content {
+    overflow: visible;
+}
+

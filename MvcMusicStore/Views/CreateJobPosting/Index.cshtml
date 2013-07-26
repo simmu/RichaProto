@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
+}
+@section basecss{
+    <link href="~/Content/recuritment.css" rel="stylesheet" />
+}
+<script>
+    var __initialData = {
+            "lastSaved": "Never",
+            "status": "Inactive"        
+    }
+</script>
+<div ng-app="rn">
+    <div ng-controller="jobPostingCtrl">
+        <div class="job-posting" jobPosting>
+            <a href="#">Return to Campaigns Home</a>
+            <h2>Acme Summer Ambassadors</h2>
+            <hr />
+            <h3>Job Posting</h3>
+            <ul class="campaign-status clearfix">
+                <li><b>Last Saved</b>: {{model.lastSaved}}</li>
+                <li><b>Status</b>: {{model.status}}</li>
+            </ul>
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" /> Feature This Post
+                </label>
+            </div>
+            <div class="controls controls-row">
+                <div class="span8">
+                    <label><b>Headline</b></label>
+                <input type="text" placeholder ="Acme Summer Ambassadors"/ maxlength="200" class="input-xxlarge">
+                <p class="instruction">Max: 200 characters</p>
+                    <label><b>Select Logo</b></label>
+                    <input type="text" class="input-xlarge"/>
+                    <button class="btn" type="button">Browse</button>
+                    <p class="instruction">(Image Format must be .jpeg. Image size should be 47*47 pixels)</p>
+                </div>
+                <div class="span4 dotted-border">
+                    <label><b>URL:</b></label>
+                    <input type="text" placeholder ="http://repn.at/Acme12345"/>
+                    <label><b>Iframe html:</b></label>
+                    <button class="btn">Click to copy to clipboard</button>
+                </div>
+            </div>
+            <div class="controls controls-row">
+                <label><b>Description Snippet</b></label>
+                <textarea class="span12"></textarea>
+                <p class="instruction">Max: 1000 characters</p>
+            </div>
+
+            <div class="controls controls-row">
+                <label><b>Description Detail</b></label>
+                <textarea class="span12"></textarea>
+                <p class="instruction">Max: 3000 characters</p>
+            </div>
+
+            <div class="controls controls-row">
+                <button class="btn" type="button">Preview</button>
+                <button class="btn" type="button">Save</button>
+                <button class="btn btn-primary" type="button">Activate</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section FooterScript{
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/rnutils.js"></script>
+    <script src="~/Scripts/controller.js"></script>
+    <script src="~/Scripts/angular-strap.0.7.3.js"></script>
+}

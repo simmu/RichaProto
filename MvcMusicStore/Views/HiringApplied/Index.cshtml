@@ -1,0 +1,187 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
+}
+@section basecss{
+    <link href="~/Content/recuritment.css" rel="stylesheet" />
+}
+<script>
+    var __initialData = {
+        "id": "1",
+        "name": "Acme Summer Ambassadors",
+        "qualified": "2,102",
+        "applied": "154",
+        "interviewing": "54",
+        "offered": "12",
+        "admitted": "0",
+        "rejected": "11",
+        "student": [{
+            "id": "01",
+            "name": "Peter Homls",
+            "gender": "M",
+            "agegroup": "College",
+            "schoolname": "Stanford University",
+            "resume": "available",
+            "screeningscore": "10",
+            "screeningresult": "available",
+            "added": "20 seconds ago"
+        },
+        {
+            "id": "02",
+            "name": "Mary Worth",
+            "gender": "F",
+            "agegroup": "Professional",
+            "schoolname": "University of Pennsylvania",
+            "resume": "available",
+            "screeningscore": "8",
+            "screeningresult": "available",
+            "added": "20 seconds ago"
+        },
+        {
+            "id": "03",
+            "name": "George Franklin",
+            "gender": "M",
+            "agegroup": "High School",
+            "schoolname": "N/A",
+            "resume": "available",
+            "screeningscore": "9",
+            "screeningresult": "available",
+            "added": "20 seconds ago"
+        }]
+    };
+
+    question = {
+
+    }
+</script>
+
+<div ng-app="rn">
+    <div class="hiring-chart" ng-controller="hiringChartCtrl">
+        <div hiringChart rn-model="model" rn-api="api" >
+            <p>Hiring Charts for:</p>
+            <h2>{{model.name}}</h2>
+            <hr />
+            <div class="tabbable"> <!-- Only required for left/right tabs -->
+            <ul class="nav nav-tabs">
+                <li><a href="#tab1" data-toggle="tab">Qualified <span class="count">({{model.qualified}})</span></a></li>
+                <li class="active"><a href="#tab2" data-toggle="tab">Applied <span class="count"> ({{model.applied}})</span></a></li>
+                <li><a href="#tab3" data-toggle="tab">Interviewing <span class="count"> ({{model.interviewing}})</span></a></li>
+                <li><a href="#tab4" data-toggle="tab">Offered <span class="count"> ({{model.offered}})</span></a></li>
+                <li><a href="#tab5" data-toggle="tab">Admitted <span class="count"> ({{model.admitted}})</span></a></li>
+                <li><a href="#tab5" data-toggle="tab">Rejected <span class="count"> ({{model.rejected}})</span></a></li>
+            </ul>
+              <div class="tab-content">
+                <div class="tab-pane" id="tab1">
+                  <p>Howdy, I'm in Section 2.</p>
+                </div>
+                <div class="tab-pane active" id="tab2">
+                    <div class="clearfix action-ribbon">
+                    <div class="span6">
+                        <select class="span6 select-btn-same-line">
+                        <option value="- Bulk Actions -">- Bulk Actions -</option>
+                        <!-- ngRepeat: action in model.action --><option ng-repeat="action in model.action" class="ng-scope ng-binding" value="add">add</option><option ng-repeat="action in model.action" class="ng-scope ng-binding" value="remove">remove</option><option ng-repeat="action in model.action" class="ng-scope ng-binding" value="move">move</option>
+                        </select>
+                        <button type="button" class="btn">Go</button>
+                    </div>
+                    <div class="span6">
+                        <input type="text" class="input-btn-same-line">
+                        <button type="button" class="btn">Search Reps</button>
+                        <a class="export" href="#">Export</a>
+                    </div>
+                 </div>
+                    
+                <!-- Model-->
+                <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <p class="myModalLabel">SCREENING RESULT</p>
+                  </div>
+                  <div class="modal-body">
+                      <p>Applicant: <span class="">{{applicant.name}}Mary Worth</span></p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr><th>Responses</th>
+                            <th>Score</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="questionary in questionList">
+                                <td>{{questionary.ques}}</td>
+                                <td>{{questionary.score}}</td>
+                            </tr>
+                            <tr>
+                                <td>Total Score</td>
+                                <td>{{total.score}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                      <hr />
+                      <div class="pagination">
+                      <ul>
+                        <li><a href="#">Prev</a></li>
+                        <li><a href="#">Next</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                 
+                </div>
+                    <table class="table table-striped">
+                   <thead>
+                       <tr>
+                           <th class="headerSortUp"><input type="checkbox"><a href="#">Name</a></th>
+                           <th><a href="#">Sex</a></th>
+                           <th><a href="#">Age Group</a></th>
+                           <th class="headerSortUp"><a href="#">School Name</a></th>
+                           <th><a href="#">Resume</a></th>
+                           <th class="headerSortUp"><a href="#">Screening Score</a></th>
+                           <th><a href="#">Screening Results</a></th>
+                           <th class="headerSortUp"><a href="#">Added</a></th>
+                           <th><a href="#">View</a></th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr ng-repeat="student in model.student">
+                           <td><input type="checkbox"> {{student.name}}</td>
+                           <td>{{student.gender}}</td>
+                           <td>{{student.agegroup}}</td>
+                           <td>{{student.schoolname}}</td>
+                           <td>{{student.resume}}</td>
+                           <td>{{student.screeningscore}}</td>
+                           <td><a href="#myModal" data-toggle="modal">{{student.screeningresult}}</a></td>
+                           <td>{{student.added}}</td>
+                           <td>
+                               <div class="btn-group">
+                                    <a  class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">View Profile</a></li>
+                                        <li><a href="#">Interview</a></li>
+                                        <li><a href="#">Offer</a></li>
+                                        <li><a href="#" ng-click="onReject($event,school.id)">Reject</a></li>
+                                    </ul>
+                                </div>
+                           </td>
+                       </tr>
+                   </tbody>
+               </table>
+                </div>
+                  <div class="tab-pane" id="tab3">
+                  <p>Howdy, I'm in Section 3.</p>
+                </div>
+                  <div class="tab-pane" id="tab4">
+                  <p>Howdy, I'm in Section 4.</p>
+                </div>
+                  <div class="tab-pane" id="tab5">
+                  <p>Howdy, I'm in Section 5.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section FooterScript{
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/rnutils.js"></script>
+    <script src="~/Scripts/controller.js"></script>
+    <script src="~/Scripts/angular-strap.0.7.3.js"></script>
+}

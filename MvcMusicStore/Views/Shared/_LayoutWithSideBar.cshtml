@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "_LayoutWithSideBar";
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+ @RenderSection("basecss",required:false)
+
+<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="well sidebar-nav">
+            @Html.Partial("sideBar")
+          </div>
+        </div>
+
+        <div class="span10">
+            @RenderBody()
+        </div>
+      </div>
+</div>
+@RenderSection("FooterScript", required:false)

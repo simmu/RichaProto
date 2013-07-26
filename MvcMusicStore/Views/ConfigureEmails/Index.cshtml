@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutWithSideBar.cshtml";
+}
+@section basecss{
+    <link href="~/Content/recuritment.css" rel="stylesheet" />
+}
+<script>
+    var __initialData = {
+        "name": "Acme Summer Ambassadors",
+        "lastSaved": "Never",
+        "status": "Not Sent"
+    };
+</script>
+<div ng-app="rn">
+    <div class="configure-emails" ng-controller="configureEmailsCtrl">
+        <div configureEmails rn-model="model" rn-api="api">
+            <h2>{{model.name}}</h2>
+            <hr />
+            <h3>Configure Emails</h3>
+            <div class="tabbable"> <!-- Only required for left/right tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Campaign Blast</a></li>
+                <li><a href="#tab2" data-toggle="tab">Interview</a></li>
+                <li><a href="#tab3" data-toggle="tab">Offer</a></li>
+                <li><a href="#tab4" data-toggle="tab">Welcome</a></li>
+                <li><a href="#tab5" data-toggle="tab">Rejection</a></li>
+            </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" />Not Required
+                        </label>
+                    </div>
+                    <hr />
+                    <ul class="campaign-status clearfix">
+                        <li><b>Last Saved</b>: {{model.lastSaved}}</li>
+                        <li><b>Status</b>: {{model.status}}</li>
+                    </ul>
+        
+                    <div class="controls controls-row">
+                       <div class="span8">
+                            <label><b>Reply To:</b></label>
+                        <input type="text" placeholder ="JoeManager@Repnation.com"/ maxlength="200" class="input-xlarge">
+            
+                           <label><b>Subject</b></label>
+                           <input type="text" class="input-xxlarge" placeholder="Acme Summer Ambassadors"/>
+                           <p class="instruction">Max: 200 characters</p>
+                       </div>
+                        <div class="span4 dotted-border">
+                            <button class="btn">Add/Change Image</button>
+                        </div>
+                        <p class="instruction">*Campaign Image will be used unless changed.</p>
+                    </div>
+
+                    <div class="controls controls-row">
+                        <label><b>Message</b></label>
+                        <textarea class="span12" placeholder="This will be pre-populated with some default messaging that the manager can edit."></textarea>
+                        <p class="instruction">Max: 1000 characters</p>
+                    </div>
+
+                    <div class="controls controls-row">
+                        <button class="btn btn-btn-same-line" type="button">Preview</button>
+                        <button class="btn btn-btn-same-line" type="button">Save</button>
+                        <button class="btn btn-primary" type="button">Activate</button>
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Howdy, I'm in Section 2.</p>
+                </div>
+                  <div class="tab-pane" id="tab3">
+                  <p>Howdy, I'm in Section 3.</p>
+                </div>
+                  <div class="tab-pane" id="tab4">
+                  <p>Howdy, I'm in Section 4.</p>
+                </div>
+                  <div class="tab-pane" id="tab5">
+                  <p>Howdy, I'm in Section 5.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section FooterScript{
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/rnutils.js"></script>
+    <script src="~/Scripts/controller.js"></script>
+    <script src="~/Scripts/angular-strap.0.7.3.js"></script>
+}

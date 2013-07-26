@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="hero-unit">
+    <h2>Accordion Script included only for Contact Page</h2>
+    <ul class="accordion">
+        <li class="item"><a href="#">Mumbai</a>
+            <div class="content">
+                <address>LBi INDIA <br />
+                126 Mathuradas Mills Compound, Lower Parel, Mumbai 400 013, India<br />
+                An LBi Group Company<br />
+                </address>
+            </div>
+        </li>
+       <li class="item"><a href="#">UK</a>
+            <div class="content">
+                <address> UK <br />
+                    LBi  146 Brick Lane  London  E1 6RU UK <br/>
+                    An LBi Group Company <br/>
+                </address>   
+            </div>
+        </li>
+         <li class="item"><a href="#">US</a>
+            <div class="content">
+                <address>MRY Making Brands Remarkable   <br />
+                11 West 19th Street, 3rd Floor, NY, NY 10011<br />
+                mry.com<br/>
+                </address>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="cols"></div>
+<div class="hero-unit">
+    <h3>Click on anydate and it will display events occuring on that date</h3>
+    <div id="datepicker"></div>
+    <div id="dialog" title="Basic dialog">
+        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+    </div>
+</div>
+
+@section basecss{
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link href="~/Content/oocss.css" rel="stylesheet" />
+
+}
+@section FooterScript{
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="~/Scripts/accordion.js"></script>
+    <script src="~/Scripts/demo2.js"></script>
+}
