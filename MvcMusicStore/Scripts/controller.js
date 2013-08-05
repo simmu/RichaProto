@@ -51,11 +51,11 @@ app.directive("campaign", function () {
             var params = generatePageParams();
             $scope.api.doGetPages(params,
                 function (data) {
-                $scope.$apply(function () {
-                    
-                    $scope.pages = $scope.paging.generatePagesFromPaging($scope.model.paging, 1, 1);
+                    $scope.$apply(function () {
+
+                        $scope.pages = $scope.paging.generatePagesFromPaging($scope.model.paging, 1, 1);
+                    });
                 });
-            });
 
             e.preventDefault();
         }
@@ -165,9 +165,9 @@ app.controller("demographicPreferenceCtrl", function ($scope) {
 app.directive("selection", function () {
     console.log("Inside directive");
     var link = function ($scope, $ele, attrs, ctrl) {
-     
+
         $scope.onAddSchool = function (e, school) {
-            
+
             $scope.api.doAddSchool(school,
                 function (data) {
                     //success
@@ -190,13 +190,13 @@ app.directive("selection", function () {
 
 //School Selection Controller
 app.controller("schoolSelectionCtrl", function ($scope) {
-    $scope.model = __initialData;
-    $scope.embed = __embedData;
+    $scope.model = __initialData.demographic_config;
+    $scope.embed = __initialData.embed_list;
     $scope.api = {};
 
     //create api method
     $scope.api.doAddSchool = function (school, onComplete, onFail) {
-        
+
         var params = {
             school: school
         }
@@ -206,10 +206,10 @@ app.controller("schoolSelectionCtrl", function ($scope) {
         })
         .fail(function (data) {
             setTimeout(function () {
-                
+
                 $scope.$apply(function () {
                     for (var i = 0; i < $scope.embed.school.length; i++) {
-                        
+
                         console.log($scope.embed.school.length);
                     }
                 })
@@ -265,7 +265,7 @@ app.directive("hiringChart", function () {
         link: link,
         scope: {
             model: '=rnModel',
-            api : '=rnApi'
+            api: '=rnApi'
         }
     }
 })
