@@ -10,7 +10,7 @@ app.directive("campaign", function () {
         //onDelete
         $scope.onDeleteSchool = function (e, school) {
             //make it object
-            $scope.toBeDeleteId = school;
+            $scope.toBeDeleted = school;
             $('#modal-confirmDelete').modal('show');
             e.preventDefault();
         }
@@ -18,11 +18,11 @@ app.directive("campaign", function () {
         //onConfirm delete
         $scope.onConfirmDelete = function (e) {
 
-            if ($scope.toBeDeleteId) {
+            if ($scope.toBeDeleted) {
                 var $el = $(e.currentTarget);
                 $el.button('loading');
                 //call api method
-                $scope.api.doDeleteSchool($scope.toBeDeleteId,
+                $scope.api.doDeleteSchool($scope.toBeDeleted.id,
                     function (data) {
                         $el.button('reset');
                         $scope.$apply(function () {

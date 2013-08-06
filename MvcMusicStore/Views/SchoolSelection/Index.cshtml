@@ -127,7 +127,7 @@
                     <thead>
                         <tr>
                             <th  class="headerSortUp col20">
-                                <input type="checkbox"/>
+                                <input type="checkbox" ng-click="onSelectAllItem($event)"/>
                                 <a href="#">School Name</a>
                             </th>
                             <th class="headerSortUp"><a href="#">Population</a></th>
@@ -141,7 +141,7 @@
                     <tbody>
                         <tr ng-repeat="school in model.school">
                             <td>
-                               <input type="checkbox" />
+                               <input type="checkbox" ng-click="onSelectItem($event, item.id)" />
                                 <a href="#">{{school.name}}</a>
                             </td>
                             <td>{{school.population}}</td>

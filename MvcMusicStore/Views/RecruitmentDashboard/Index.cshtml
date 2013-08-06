@@ -37,10 +37,11 @@
                 <h3 id="myModalLabel">Confirm Delete</h3>
                 </div>
                 <div class="modal-body">
-                <p ng-hide="hasCompleted">Are you sure you want to delete {{school.name}}?</p>
-                <p ng-show="hasCompleted">{{school.name}} successfully deleted </p>
+                <p ng-hide="hasCompleted">Are you sure you want to delete {{toBeDeleted.name}}</p>
+                <p ng-show="hasCompleted">successfully deleted </p>
                 </div>
                 <div class="modal-footer"> 
+                    <a class="btn" href="#" data-dismiss="modal" aria-hidden="true" ng-hide="hasCompleted">Cancel</a>
                     <a ng-click="onConfirmDelete($event)" data-loading-text="submitting" class="btn btn-primary" href="#" ng-hide="hasCompleted">Confirm</a>
                     <a ng-click="onDoneDelete($event)" class="btn btn-success" href="#" ng-show="hasCompleted" style="display: none;">Done</a>
                 </div>
@@ -67,7 +68,7 @@
                                     <a  class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">View</a></li>
-                                        <li><a href="#" ng-click="doDeleteSchool($event,school)">Delete</a></li>
+                                        <li><a href="#" ng-click="onDeleteSchool($event,school)">Delete</a></li>
                                     </ul>
                                 </div>
                             </td>
